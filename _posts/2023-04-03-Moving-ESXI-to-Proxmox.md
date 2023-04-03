@@ -5,16 +5,8 @@
     tags: [esxi, proxmox]
 ---
 <!-- Post Image -->
-<style>
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-    </style>
-<img src="https://i.imgur.com/sm6Y2Jv.jpg" alt= “python” width="400rem" height="value" class="center">
-<br/><br/>
+![Sonny and Mariel high fiving.](https://i.imgur.com/sm6Y2Jv.jpg)
+<img src="https://mma.prnewswire.com/media/1513369/Educative_Logo.jpg"  width="60%" height="30%">
 <!-- End Post Image -->
 # Moving ESXI (6.5) Virtual Machines to Proxmox
 
@@ -33,7 +25,7 @@
 * Setup Proxmox VM for migration
 * Configuring Proxmox VM for the imported qcow2 image
 * Test VMs making sure everything works (including connection to SAN)
-<br /><br />
+
 
 ## Export Existing VM’s from ESXI (6.5)
 * Login to ESXI
@@ -51,7 +43,7 @@
 * This will Download the vmdk, ovf and mf files to your machine
 
 * Be patient this will take some time for larger VMs
-<br /><br />
+
 
 ## Convert vmdk files to qcow2
 * I completed the conversion to qcow2 on Windows (it’s probably easier to do this on Linux)
@@ -76,13 +68,13 @@
 
 > qemu-img.exe info YOURVMDKNAME.vmdk
 
-<br /><br />
+
 
 ## Decommission ESXI Server and install Proxmox
 If you are using the same server hardware you can now decommission ESXI and install Proxmox. I use the latest Proxmox ISO to install to my lab server.
 
 Here is the link to the latest Proxmox distros: https://www.proxmox.com/en/downloads/category/iso-images-pve
-<br /><br />
+
 
 ## Import qcow2 images
 First thing we want to do is make a folder to hold the migrated qcow2 files temporarily. Login to your Proxmox server and access the shell. Use this command to make directory to copy to: mkdir /var/lib/vz/template/qemu (note: You don’t have to use sudo here because you are logged in as root)
@@ -92,7 +84,7 @@ I use Powershell with the scp (Secure Copy) command to move the qcow2 files to t
 > scp YOURVMDKNAME.qcow2 root@PROXMOX_IP_ADDRESS:/var/lib/vz/template/qemu
 
 [How to Import QCOW2 into Proxmox Server? | Step by Step.](https://getlabsdone.com/how-to-import-qcow2-into-proxmox-server-step-by-step/)
-<br /><br />
+
 
 ## Testing VMs, making sure everything works (including connection to SAN)
 I am using a SAN so I had to make sure connections works afterword’s. I tested by installing Proxmox onto my ESXI as a VM and followed all the steps above. After I completed all the steps I booted the VM in Proxmox. I thought I was doing something wrong with Proxmox because I could not get the VM to communicate with the network (only able to ping the host (Proxmox) and not my gateway). It turns out since I was using nested vitalization I had to turn on Promiscuous mode on the VM Network in ESXI. After fixing this I was able to fully test the migrated qcow2 VM. Everything worked! I exported/converted all my VMs and decommissioned ESXI, installed Proxmox and followed the same steps again. I am now fully migrated to Proxmox. 
