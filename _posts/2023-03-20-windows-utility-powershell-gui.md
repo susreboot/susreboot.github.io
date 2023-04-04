@@ -60,6 +60,6 @@ The Updates tab deals with setting Windows Update options. These update options 
 
 Source: [One Tool for Everything](https://www.youtube.com/watch?v=vXyMScSbhk4)
 
-![](images/image-5.png)
+![](/assets/images/image-5.png)
 
 Source: [https://christitus.com/one-tool-for-everything/](https://christitus.com/one-tool-for-everything/)
