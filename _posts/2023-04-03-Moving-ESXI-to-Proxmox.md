@@ -3,25 +3,23 @@
     date: 03-04-2023
     categories: [tutorials]
     tags: [esxi, proxmox]
+    image: /assets/images/VMware-vSphere-Blog-Images-vSphere.jpg
 ---
-<!-- Post Image -->
-![Sonny and Mariel high fiving.](https://i.imgur.com/sm6Y2Jv.jpg)
-<img src="https://mma.prnewswire.com/media/1513369/Educative_Logo.jpg"  width="60%" height="30%">
-<!-- End Post Image -->
+
 # Moving ESXI (6.5) Virtual Machines to Proxmox
 
 ## Steps to achieve migration (TL;DR)
 * Export Existing VM’s from ESXI
 * Convert vmdk files to qcow2 
-    *  https://cloudbase.it/qemu-img-windows/
+    * [https://cloudbase.it/qemu-img-windows/](https://cloudbase.it/qemu-img-windows/)
     * Unzip to directory
     * Make sure vmdk is in same directory as qemu-img.exe (for ease of conversion)
     * Use this command to convert vmdk to qcow2
         * qemu-img.exe convert -f vmdk -O qcow2 “YOURVMDKNAME.vmdk” YOURVMDKNAME.qcow2
 * Decommission ESXI Server and install Proxmox
-    * https://www.proxmox.com/en/downloads/category/iso-images-pve
+    * [https://www.proxmox.com/en/downloads/category/iso-images-pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 * Import qcow2 images
-    * https://getlabsdone.com/how-to-import-qcow2-into-proxmox-server-step-by-step/
+    * [https://getlabsdone.com/how-to-import-qcow2-into-proxmox-server-step-by-step/](https://getlabsdone.com/how-to-import-qcow2-into-proxmox-server-step-by-step/)
 * Setup Proxmox VM for migration
 * Configuring Proxmox VM for the imported qcow2 image
 * Test VMs making sure everything works (including connection to SAN)
@@ -48,7 +46,7 @@
 ## Convert vmdk files to qcow2
 * I completed the conversion to qcow2 on Windows (it’s probably easier to do this on Linux)
 
-* Got to this address and download qemu-img.zip (https://cloudbase.it/qemu-img-windows/):
+* Got to this address and download qemu-img.zip [https://cloudbase.it/qemu-img-windows/](https://cloudbase.it/qemu-img-windows/):
 
 * Unzip this folder to your Desktop
 
@@ -73,7 +71,7 @@
 ## Decommission ESXI Server and install Proxmox
 If you are using the same server hardware you can now decommission ESXI and install Proxmox. I use the latest Proxmox ISO to install to my lab server.
 
-Here is the link to the latest Proxmox distros: https://www.proxmox.com/en/downloads/category/iso-images-pve
+Here is the link to the latest Proxmox distros: [https://www.proxmox.com/en/downloads/category/iso-images-pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 
 
 ## Import qcow2 images

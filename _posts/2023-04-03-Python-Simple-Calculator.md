@@ -3,25 +3,14 @@
     date: 03-04-2023
     categories: [programming]
     tags: [python]
+    image: /assets/images/Python-language.png
 ---
-<!-- Post Image -->
-<style>
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-    </style>
-<img src="https://i.imgur.com/lHUuf1t.png" alt= “python” width="400rem" height="value" class="center">
-<br/><br/>
-<!-- End Post Image -->
 
 This is a simple calculator Python project from “100 Days of Code: The Complete Python Pro Bootcamp” I am going through. It took some figuring out but the final project took shape!
 
-Here is the Github repository if your curious to check it out: https://github.com/susreboot/Simple-Python-Calculator
+Here is the Github repository if your curious to check it out: [https://github.com/susreboot/Simple-Python-Calculator](https://github.com/susreboot/Simple-Python-Calculator)
 
-Here is the Repl URL: https://replit.com/@systemreboot/100DOC-Calculator-App
+Here is the Repl URL: [https://replit.com/@systemreboot/100DOC-Calculator-App](https://replit.com/@systemreboot/100DOC-Calculator-App)
 
 Also here is the code for it if you’d rather not go to Github or Replit.
 
