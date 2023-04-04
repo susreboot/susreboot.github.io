@@ -20,7 +20,7 @@ timezone: America/New_York
 
 title: Josh Brade # the main title
 
-tagline: Sharing learned technical knowledge. I'm all over the place.  # it will display as the sub-title
+tagline: Sharing learned technical knowledge. I'm all over the place <br/>[button url="http://www.google.com"].  # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   
@@ -42,7 +42,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/susreboot # change to your github homepage
+      - https://github.com/susreboot # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
