@@ -13,4 +13,4 @@ You can add Sysinternals as a mapped drive in Windows by using this command at t
 
 \> net use W: https://live.sysinternals.com/tools
 
-![](images/sysinternals_mapped-1024x283.jpg)
+![](/assets/images/sysinternals_mapped-1024x283.jpg)

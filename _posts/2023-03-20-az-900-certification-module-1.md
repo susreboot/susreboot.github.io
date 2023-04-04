@@ -83,14 +83,14 @@ Disaster Recovery (DR)
     
     - Scaling down (↓)– Decreasing resources to match the needs of the virtual service.
 
-![](images/image-1.jpeg)
+![](/assets/images/image-1.jpeg)
 
 - Horizontal Scaling (↔) – Adding similar machines to equally distribute the service workload across machines. This can be increased or decreased on a need basis and can also occur automatically.
     - Scaling out (→) - Increasing the amount of resources/instances needed for virtual services.
     
     - Scaling in (←) - Decreasing the amount of resources/instances needed for virtual services.
 
-![](images/image.jpeg)
+![](/assets/images/image.jpeg)
 
 **Elasticity** 
 
@@ -108,7 +108,7 @@ Disaster Recovery (DR)
         
         - **Azure Traffic Manager** (a DNS-based traffic balancer) can be used to fail-over from a failing primary system to a stand-by secondary system.
 
-![](images/image.png)
+![](/assets/images/image.png)
 
 **Disaster**
 
